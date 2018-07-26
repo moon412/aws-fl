@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/yuezha01/fedavg_data/sgd_mnist_paper/model.ckpt"
+all_model_checkpoint_paths: "/home/yuezha01/fedavg_data/sgd_mnist_paper/model.ckpt"
