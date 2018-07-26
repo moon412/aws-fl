@@ -75,8 +75,8 @@ correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 #Training
-rounds=2
-batch_size =10
+rounds=100
+batch_size =100
 init_lr = 0.01
 total_batch_sgd = int(images_train.shape[0]/batch_size)
 print(total_batch_sgd)
