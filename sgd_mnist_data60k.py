@@ -97,7 +97,7 @@ sgd_loss.append(sess_sgd.run(cross_entropy, feed_dict={x: images_test.reshape(10
 print(sgd_accuracy)
 print(sgd_loss)
 
-start = time.time()
+start_time = time.time()
 for epoch in range(rounds):
     start, end = 0, batch_size
         
