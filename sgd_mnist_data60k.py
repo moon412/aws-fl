@@ -97,6 +97,7 @@ sgd_loss.append(sess_sgd.run(cross_entropy, feed_dict={x: images_test.reshape(10
 print(sgd_accuracy)
 print(sgd_loss)
 
+start = time.time()
 for epoch in range(rounds):
     start, end = 0, batch_size
         
@@ -115,7 +116,8 @@ for epoch in range(rounds):
     
     print('Epoch {0}: loss={1}, accuracy={2}, lr={3}'.format(epoch, test_loss, test_accuracy, learning_rate))
     learning_rate *= decay
-    
+end_time = time.time()
+print("Training takes {}s".format(end_time-start_time))    
 
 with open('./sgd_mnist_data60k.pickle', 'wb') as handle:
     pickle.dump({'parameters': [batch_size, init_lr, decay],
